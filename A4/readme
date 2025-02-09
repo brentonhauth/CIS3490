@@ -1,0 +1,18 @@
++-----------------------------------------------------+
+|  CIS*3490 - Assignment 4 - Brenton Hauth (1229237)  |
++-----------------------------------------------------+
+
+=========================[FILES]=========================
+P1.h   -  General code for both P11.c & P12.c (reading files, searching bst, creating tree nodes)
+P11.c  -  The optimal bst problem for P1.1
+P12.c  -  The greedy technique search tree problem for P1.2
+
+P2.c   -  All code for the stable marriage problem in P2
+
+makefile    -  For making the programs
+
+======================[HOW TO RUN]=======================
+* To make all files, call `make`
+* To make a specific program call `make P11` (works with P11, P12, P2)
+* To run the program, call `./P11` after making (works with P11, P12, P2)
+* Each program will output (and request input) exactle like the guide

@@ -1,0 +1,21 @@
++-----------------------------------------------------+
+|  CIS*3490 - Assignment 5 - Brenton Hauth (1229237)  |
++-----------------------------------------------------+
+
+I have matched the output exactly like that in the guide.
+
+=========================[FILES]=========================
+P1.h   -  General code for both P11.c & P12.c (reading data, stopwatch)
+P11.c  -  The brute force subset sum problem for P1.1
+P12.c  -  The branch and bound subset sum problem for P1.2
+
+P2.h   -  General code for P21.c & P22.c (reading data, stopwatch)
+P21.c  -  The brute force job assignment problem for P2.1
+P22.c  -  The branch and bound job assignment problem for P2.2
+
+makefile    -  For making the programs
+
+======================[HOW TO RUN]=======================
+* To make all files, call `make`
+* To make a specific program call `make P11` (works with P11, P12, P21 and P22)
+* To run the program, call `./P11` after making (works with P11, P12, P21 and P22)

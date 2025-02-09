@@ -1,0 +1,97 @@
++-----------------------------------------------------+
+|  CIS*3490 - Assignment 3 - Brenton Hauth (1229237)  |
++-----------------------------------------------------+
+
+=========================[FILES]=========================
+P1.h   -  General code for both P11.c & P12.c (reading files, stopwatch)
+P11.c  -  The brute force code interval counter for P1.1
+P12.c  -  The presorted interval counter for P1.2
+
+P2.h   -  General code for P21.c, P22.c & P23.c (reading points, creating shift tables, stopwatch)
+P21.c  -  The brute force string match counter for P2.1
+P22.c  -  The Horspool algorithm string match counter for P2.2
+P23.c  -  The Boyer-Moore algorithm string match counter for P2.3
+
+makefile    -  For making the programs
+
+======================[HOW TO RUN]=======================
+* To make all files, call `make`
+* To make a specific program call `make P11` (works with P11, P12, P21, P22 and P23)
+* To run the program, call `./P11` after making (works with P11, P12, P21, P22 and P23)
+
+
+=======================[ANALYSIS]========================
+[P11 & P12]
+After running 10 trials for both P11 & P12, I found that P11 had
+an average time of 8932.8ms (sd = 40.4) and P12 had an average
+time of 2611.4ms (sd = 14.9). On average P12 was about 3.4x
+faster than P11.
+
+[P21 "BRUTE FORCE" STATS]
++--------------+------+---------+-------------+
+|   pattern    | time | shifts  | shifts/time |
++--------------+------+---------+-------------+
+| maintain     | 16.1 | 3296596 |   204757.5  |
+| Canada       | 14.7 | 3296596 |   224258.2  |
+| a            | 17.9 | 3296603 |   184167.8  |
+| organization | 18.1 | 3296592 |   182132.2  |
+| University   | 15.3 | 3296594 |   215463.7  |
+| Guelph       | 14.7 | 3296598 |   224258.4  |
+| Assessment   | 15.8 | 3296594 |   208645.2  |
+| Coordinator  | 13.3 | 3296593 |   247864.1  |
+| student      | 18.0 | 3296597 |   183144.3  |
+| processes    | 15.7 | 3296595 |   209974.2  |
++--------------+------+---------+-------------+
+Mean ratio of shifts to time = 208466.56  (sd = 21189.86)
+
+[P22 "HORSPOOL" STATS]
++--------------+------+---------+-------------+
+|   pattern    | time | shifts  | shifts/time |
++--------------+------+---------+-------------+
+| maintain     |  9.7 |  499555 |   51500.5   |
+| Canada       | 10.4 |  609938 |   58647.9   |
+| a            | 55.9 | 3296603 |   58973.2   |
+| organization |  7.0 |  353898 |   50556.9   |
+| University   |  7.9 |  430152 |   54449.6   |
+| Guelph       | 10.8 |  601891 |   55730.6   |
+| Assessment   |  6.1 |  393264 |   64469.5   |
+| Coordinator  |  7.7 |  402730 |   52302.6   |
+| student      | 12.0 |  566994 |   47249.5   |
+| processes    | 10.6 |  558013 |   52642.7   |
++--------------+------+---------+-------------+
+Mean ratio of shifts to time = 54652.30  (sd = 4980.89)
+
+[P23 "BOYER-MOORE" STATS]
++--------------+------+---------+-------------+
+|   pattern    | time | shifts  | shifts/time |
++--------------+------+---------+-------------+
+| maintain     | 12.3 |  485077 |   39437.2   |
+| Canada       | 14.9 |  588705 |   39510.4   |
+| a            | 66.1 | 3296603 |   49873.0   |
+| organization |  8.9 |  347174 |   39008.3   |
+| University   | 10.5 |  431825 |   41126.2   |
+| Guelph       | 14.7 |  603448 |   41050.9   |
+| Assessment   | 10.9 |  398562 |   36565.3   |
+| Coordinator  | 10.0 |  395088 |   39508.8   |
+| student      | 15.2 |  559806 |   36829.3   |
+| processes    | 10.6 |  422454 |   39854.2   |
++--------------+------+---------+-------------+
+Mean ratio of shifts to time = 40276.36  (sd = 3692.91)
+
+
+[COMPARING P21 TO P22]
+When looking at the mean ratio of shifts to time between the brute force
+algorithm (208466.56) and the Horspool algorithm (54652.30) we can see that
+the brute force algorithm has a ratio that is approx. 3.8x larger than the
+Horspool. Meaning that the Horspool algorithm is able to accomplish the same
+utilizing less shifts in a smaller amount of time.
+
+[COMPARING P21 TO P23]
+When looking at the ratio between the Boyer-Moore algorithm (40276.36) and
+the brute force algorithm (208466.56) we can see that the ratio of the brute
+force is approx. 5.2x larger.
+This is a much greater difference than how it compared to the Horspool algo.
+Even though the brute force & Boyer-Moore had similar times for some of the
+search patterns ("Guelph" had 14.7ms for both), it shows that the Boyer-Moore
+algo. was able to the same thing with less shifts, and in most cases, resulted
+in faster times.

@@ -1,0 +1,46 @@
++-----------------------------------------------------+
+|  CIS*3490 - Assignment 2 - Brenton Hauth (1229237)  |
++-----------------------------------------------------+
+
+=========================[FILES]=========================
+P11.c  -  The brute force code counter for P1.1
+P12.c  -  The Divide & Conquer code counter for P1.2
+P21.c  -  The brute force code counter for P2.1
+P22.c  -  The Divide & Conquer code counter for P2.2
+P1.h   -  General code for both P11.c & P12.c (reading files, stopwatch)
+P2.h   -  General code for both P21.c & P22.c (reading points, finding shortest path, stopwatch)
+
+makefile    -  For making the programs
+design.pdf  -  the algorithms analysis for P1.1, P1.2, P2.1 & P2.2
+
+
+======================[HOW TO RUN]=======================
+* To make all files, call `make`
+* To make a specific program call `make P11` (works with P11, P12, P21 and P22)
+* To run the program, call `./P11` after making (works with P11, P12, P21 and P22)
+
+
+[P11 & P12]
+When running P11 or P12, you will be prompted to enter the file name you want to read from
+==============
+> Enter File:
+==============
+
+
+After entering the file, the program will run and show you
+the number of inversions & how long it took
+==========================
+> Time elapsed: _______ms
+> Inversions: ___________
+==========================
+
+
+
+[P21 & P22]
+When you run either P21 or P22, the convex hull will be calculated then you will
+be able to enter the x & y coords for s1 & s2
+
+===================
+> Enter x for s1$ 
+> Enter x for s1$ 
+===================
